@@ -1,38 +1,100 @@
 <!DOCTYPE html>
-<!-- saved from url=(0025)http://adrenalinarp.pl/podpisy/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>Generowanie Podpisów by monszyn</title>
-    <link rel="stylesheet" href="./Generowanie Podpisów by monszyn_files/style.css">
-<style type="text/css" id="operaUserStyle"></style></head>
-
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<title>Generowanie Podpisów by monszyn</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f0f0f0;
+  }
+  h1 {
+    text-align: center;
+  }
+  .input-container {
+    margin-bottom: 10px;
+  }
+  label {
+    display: inline-block;
+    width: 120px;
+  }
+  input, select {
+    padding: 5px;
+    width: 200px;
+  }
+  #download {
+    margin-top: 10px;
+    padding: 8px 16px;
+  }
+  #canvas {
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
 <body>
-    <h1>Generowanie Podpisów by monszyn</h1>
 
-    <div class="input-container">
-        <label for="textInput">Imię i nazwisko:</label>
-        <input type="text" id="textInput" placeholder="Imię i nazwisko">
-    </div>
+<h1>Generowanie Podpisów by monszyn</h1>
 
-    <div class="input-container">
-        <label for="textInput2">Stopień:</label>
-        <input type="text" id="textInput2" placeholder="Stopień">
-    </div>
+<div class="input-container">
+  <label for="textInput">Imię i nazwisko:</label>
+  <input type="text" id="textInput" placeholder="Imię i nazwisko" />
+</div>
 
-    <select id="selectMenu">
-        <option value="lspd">SASP</option>
-        <option value="emt">SASD</option>
-        <option value="doj">SAMS</option>
-        <option value="aiad">SCM</option>
-        <option value="dtu">DOJ</option>
-        
-    </select>
+<div class="input-container">
+  <label for="textInput2">Stopień:</label>
+  <input type="text" id="textInput2" placeholder="Stopień" />
+</div>
 
-    <button id="download">Pobierz</button>
+<div class="input-container">
+  <label for="selectMenu">Wybierz grupę:</label>
+  <select id="selectMenu">
+    <option value="lspd">SASP</option>
+    <option value="emt">SASD</option>
+    <option value="doj">SAMS</option>
+    <option value="aiad">SCM</option>
+    <option value="dtu">DOJ</option>
+  </select>
+</div>
 
-    <canvas id="canvas"></canvas>
+<button id="download">Pobierz</button>
 
-    <script src="./Generowanie Podpisów by monszyn_files/script.js.pobrany plik"></script>
+<canvas id="canvas" width="600" height="200"></canvas>
 
+<script>
+  // Funkcja do generowania podpisu na canvas
+  document.getElementById('download').addEventListener('click', function() {
+    const name = document.getElementById('textInput').value;
+    const rank = document.getElementById('textInput2').value;
+    const group = document.getElementById('selectMenu').value;
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
 
-</body></html>
+    // Wyczyść canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Ustaw tło (opcjonalnie)
+    ctx.fillStyle = "#ffffff";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Tekst do podpisu
+    ctx.fillStyle = "#000000";
+    ctx.font = "24px Arial";
+
+    // Rysuj tekst
+    ctx.fillText(`Podpis: ${name}`, 50, 80);
+    ctx.fillText(`Stopień: ${rank}`, 50, 120);
+    ctx.fillText(`Grupa: ${group.toUpperCase()}`, 50, 160);
+
+    // Pobierz obraz jako plik
+    const link = document.createElement('a');
+    link.download = 'podpis.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+</script>
+
+</body>
+</html>
