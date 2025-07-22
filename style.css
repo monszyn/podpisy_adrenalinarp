@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Cinzel';
+    src: url(fonts/Cinzel-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(fonts/Montserrat-ExtraLightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'LibreBaskerville';
+    src: url(fonts/LibreBaskerville-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'HerrVonMuellerhoff';
+    src: url(fonts/HerrVonMuellerhoff-Regular.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f1f1f1;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-container label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    padding: 5px;
+    font-size: 14px;
+}
+
+#selectMenu {
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#download {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#canvas {
+    width: 750px;
+    height: 340px;
+    margin-top: 20px;
+}
