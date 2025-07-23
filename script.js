@@ -1,9 +1,9 @@
 let logos = {
     "sasp": "./images/san_andreas_state_police.png",
-    "sasd": "./images/sheriffs_department.png",
+    "sasd": "./images/sasd.png",
     "doj": "./images/department_of_justice.png",
-    "sams": "./images/san_andreas_medical_services.png",
-    "scm": "./images/scm.png",
+    "sams": "./images/sams.png",
+    "scm": "./images/scm1.png",
 
 }
 
