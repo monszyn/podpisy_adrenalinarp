@@ -8,17 +8,10 @@ let logos = {
 }
 
 let departamentsText = {
-    "lspd": "Los Santos Police Department",
-    "lspd2": "Los Santos Police Department",
-    "emt": "Emergency Medical Technician",
     "doj": "Los Santos Department Of Justice",
-    "aiad": "Administrative Internal Affairs Division",
-    "dtu": "Los Santos Police Department Detective Unit",
-    "sahp": "San Andreas Highway Patrol",
-    "usms": "United States Marshals Service",
-    "swat": "Special Weapons And Tactics",
-    "bsco": "Blaine County Sheriff's Office",
-    "lspc": "Los Santos Psychologist Center",
+    "sams": "San Andreas Medical Service",
+    "scm": "Salazar Car Mechanic",
+    "sasd": "San Andreas Sheriff's Department",
     "sasp": "San Andreas State Police"
 }
 
