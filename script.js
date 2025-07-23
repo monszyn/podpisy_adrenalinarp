@@ -1,16 +1,10 @@
 let logos = {
-    "lspd": "./logos/lspd.png",
-    "emt": "./logos/emt.png",
-    "doj": "./logos/doj.png",
-    "aiad": "./logos/aiad.png",
-    "dtu": "./logos/dtu.png",
-    "lspd2": "./logos/lspd2.png",
-    "sahp": "./logos/sahp.png",
-    "usms": "./logos/usms.png",
-    "swat": "./logos/swat.png",
-    "bsco": "./logos/bsco.png",
-    "lspc": "./logos/lspc.png",
-    "sasp": "./logos/sasp.png"
+    "sasp": "./images/san_andreas_state_police.png",
+    "sasd": "./images/sheriffs_department.png",
+    "doj": "./images/department_of_justice.png",
+    "sams": "./images/san_andreas_medical_services.png",
+    "scm": "./images/scm.png",
+
 }
 
 let departamentsText = {
