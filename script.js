@@ -3,7 +3,7 @@ let logos = {
     "sasd": "./images/sasd.png",
     "doj": "./images/department_of_justice.png",
     "sams": "./images/sams.png",
-    "scm": "./images/scm.png",
+    "scm": "./images/scm1.png",
 
 }
 
